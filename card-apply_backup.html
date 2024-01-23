@@ -1,0 +1,471 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="No-Cache">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>카드신청</title>
+<meta charset='utf-8'>
+<meta name='Title' content=''>
+<meta name='Subject' content=''>
+<meta name='Keywords' content=''>
+<meta name='Publisher' content=''>
+<meta name='Description' content=''>
+<meta name='Author-Date' content=''>
+
+<!-- 접근성 텍스트(skip) 숨김 -->
+<style>#skip{overflow: hidden; position:absolute; width:0; height:0; line-height:0; text-indent:-9999px;}</style>
+
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0' />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css'>
+<link rel='stylesheet' href='./css/common.css'/>
+
+<script src='https://code.jquery.com/jquery-3.7.0.min.js' crossorigin='anonymous'></script>
+<script src='./js/common.js' defer></script>
+
+</head>
+<body class="">
+<!-- 시각장애인 웹 접근성을 위한 skip _ 지우지않아도 됩니다. -->
+
+<ul id='skip'>
+   <li><a href='#header'>헤더 바로가기</a></li>
+   <li><a href='#nav'>메뉴 바로가기</a></li>
+   <li><a href='#content'>내용 바로가기</a></li>
+</ul>
+
+<div id="wrap">
+    <header id="header">
+        <div class="main-header">
+            <h1 class="logo">Ordi카드</h1>
+        </div>        
+    </header>
+    <main id="main">
+        <section id="section1">
+            <div class="container card-apply-step1">
+                <div class="top-box">
+                    <h2 class="top-tit">카드신청</h2>
+                    <p class="top-desc">카드 신청 정보를 입력해 주세요</p>
+                </div>
+                <div class="input-box">
+                    <div class="wrap input">
+                        <p class="tit">카드 유형</p>
+                        <div class="row">
+                            <span class="selc-type">
+                                <input type="radio" name="type" id="individual" value="individual">
+                                <label for="individual">개인</label>
+                            </span>
+                            <span class="selc-type">
+                                <input type="radio" name="type" id="family" value="family">
+                                <label for="family">가족</label>
+                            </span>
+                        </div>
+                        <div class="row">
+                            <span class="selc-type">
+                                <input type="radio" name="location" id="domestic" value="domestic">
+                                <label for="domestic">국내</label>
+                            </span>
+                            <span class="selc-type">
+                                <input type="radio" name="location" id="overseas" value="overseas">
+                                <label for="overseas">해외</label>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="wrap terms">
+                        <p class="tit">약관동의</p>
+                        <div class="terms-box">
+                            <div class="terms-all-box">
+                                <input type="checkbox" name="checkTermsAll" id="all" disabled>
+                                <label for="all" class="check-all">약관에 모두 동의합니다</label>
+                            </div>                            
+                            <div class="terms-list-box">
+                                <div class="terms-list">
+                                    <input type="checkbox" name="checkTerms" id="terms1" class="terms">
+                                    <label for="terms1" onclick="fnOpTerms('#lpopTerms1')">개인정보 이용 제공 동의</label>
+                                </div>
+                                <div class="terms-list">
+                                    <input type="checkbox" name="checkTerms" id="terms2" class="terms">
+                                    <label for="terms2" onclick="fnOpTerms('#lpopTerms2')">본인확인서비스 이용약관</label>
+                                </div>
+                                <div class="terms-list">
+                                    <input type="checkbox" name="checkTerms" id="terms3" class="terms">
+                                    <label for="terms3" onclick="fnOpTerms('#lpopTerms3')">고유식별정보 처리 동의</label>
+                                </div>
+                                <div class="terms-list">
+                                    <input type="checkbox" name="checkTerms" id="terms4" class="terms">
+                                    <label for="terms4" onclick="fnOpTerms('#lpopTerms4')">통신사 이용약관 동의</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-wrap">
+                <a href="#;" class="btn apply" role="button" onclick="fnCardApply();">카드 신청하기</a>
+            </div>
+        </section>
+    </main>      
+</div>
+
+<!-- 약관 팝업 -->
+<div class="dimmed"></div>
+<div id="lpopTerms1" class="lpop-wrap terms1">
+    <div class="lpop-header">
+        <h3 class="lpop-tit">1. 개인정보 이용 제공 동의</h3>
+        <a href="#;" class="btn-close" onclick="fnCloseTerms(this);">닫기</a>
+    </div>
+    <div class="lpop-body">
+        <p class="lpop-tit">개인정보 이용 제공 동의</p>
+        <p class="lpop-desc">귀하는 개인신용정보 수집·이용, 조회 및 제공 동의에 대해 거부하실 수 있습니다. 다만, 개인(신용)정보 수집·이용, 조회 및 제공에 관한 동의는 상거래관계의 설정, 유지에 필수적이거나, 상거래관계에 따라 귀하에게 제공되는 서비스와 직접적으로 관련된 필수적 사항이므로, 아래의 사항에 동의하셔야만 (금융)거래관계의 설정 및 유지가 가능합니다.</p>
+        <ul class="bl1">
+            <li>성명, 영문명, 국내거소신고번호, 신분증/신분서류 발급일·기관, 연락처(휴대폰, 자택, 직장), 주소(자택,직장), 이메일, 직장명, 부서, 직위, 성별, 국적, 음성data, CI(연계정보), DI(중복가입확인정보), 차량정보(차대번호, 차량번호), 식별정보 변경이력, 기타 (금융)거래관계 및 서비스의 설정·유지·이행·관리·개선 등과 관련하여 본인이 제공한 정보,</li>
+            <li>이용자의 브라우저 종류 및 OS, 검색어, 서비스 이용 기록, IP Address, Mac address, CPU ID, HDD S/N, IMEI(안드로이드 9버전 이하만 수집), UUID, 방문일시, 결제기록, 쿠키</li>
+            <li>자동납부정보(가입자명, 통신회사, 통신요금정보, 전기사용정보, 가스사용 정보, 아파트 관리비 정보, 아파트임대료 정보, 유치원ㆍ초중고교 등 학부모부담금 납부정보, 사회보험료 납부정보, 세금 납부정보, 제휴사 멤버십 정보 등)</li>
+        </ul>
+        <p class="lpop-tit">개인정보 이용 제공 동의</p>        
+        <ul class="bl2">
+            <li>OTT/스트리밍 15% 결제일 할인</li>
+            <li>이동통신요금 자동이체 5% 결제일 할인</li>
+            <li>편의점 5% 결제일 할인</li>
+        </ul>
+        <p class="lpop-desc txt-tab">※ 해당 금융거래가 변제나 이에 준하는 방식으로 거래가 종료된 경우에도 일정기간 개인신용평점의 산정에 영향을 줄 수 있습니다.</p>
+        <p class="lpop-desc txt-tab">※ 평균적으로 연체율이 높은 형태의 신용공여는 일반적인 신용공여보다 신용점수가 더 큰 폭으로 하락할 수 있습니다.</p>
+        <p class="lpop-tit">서비스 제공 조건</p>
+        <table summary="서비스 제공 조건 안내 표입니다." class="lpop-tb-type1">
+            <caption>서비스 제공 조건 안내 표</caption>
+            <colgroup>
+                <col style="width:36%;">
+                <col style="width:25%;">
+                <col style="width:auto;">
+            </colgroup>
+            <thead>
+                <tr class="row01">
+                    <th scope="col">전월 실적</th>
+                    <th scope="col">통합<br>할인한도</th>
+                    <th scope="col">통합한도 이내<br>대중교통<br>할인한도</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tac">30만원 이상 ~<br>60만원 미만</td>
+                    <td class="tac">10,000원</td>
+                    <td class="tac">(7,000원)</td>
+                </tr>
+                <tr>
+                    <td class="tac">60만원 이상 ~<br>100만원 미만 </td>
+                    <td class="tac">20,000원</td>
+                    <td class="tac">(12,000원)</td>
+                </tr>
+                <tr>
+                    <td class="tac">100만원 이상</td>
+                    <td class="tac">30,000원</td>
+                    <td class="tac">(15,000원)</td>
+                </tr>
+            </tbody>
+        </table>
+        <ol class="numl">
+            <li>① 카드사의 휴업·파산·경영상의 위기 등에 따른 불가피한 경우</li>
+            <li>①의2. 제휴업체의 휴업·파산·경영상의 위기로 인해 불가피하게 부가서비스를 축소·변경하는 경우로서 다른 제휴업체를 통해 동종의 유사한 부가서비스 제공이 불가한 경우</li>
+            <li>② 제휴업체가 카드사의 의사에 반하여 해당 부가서비스를 축소하거나 변경 시, 당초 부가서비스에 상응하는 다른 부가서비스를 제공하는 경우</li>
+            <li>③ 부가서비스를 3년 이상 제공한 상태에서 해당 부가서비스로 인해 상품의 수익성이 현저히 낮아진 경우</li>
+        </ol>
+    </div>
+    <div class="lpop-btn-box">
+        <a href="#;" class="btn agree" onclick="fnSubmitTerms1('this')">동의하기</a>
+    </div>
+</div>
+
+<div id="lpopTerms2" class="lpop-wrap terms2">
+    <div class="lpop-header">
+        <h3 class="lpop-tit">2. 개인정보 이용 제공 동의</h3>
+        <a href="#;" class="btn-close" onclick="fnCloseTerms(this);">닫기</a>
+    </div>
+    <div class="lpop-body">
+        <p class="lpop-tit">개인정보 이용 제공 동의</p>
+        <p class="lpop-desc">귀하는 개인신용정보 수집·이용, 조회 및 제공 동의에 대해 거부하실 수 있습니다. 다만, 개인(신용)정보 수집·이용, 조회 및 제공에 관한 동의는 상거래관계의 설정, 유지에 필수적이거나, 상거래관계에 따라 귀하에게 제공되는 서비스와 직접적으로 관련된 필수적 사항이므로, 아래의 사항에 동의하셔야만 (금융)거래관계의 설정 및 유지가 가능합니다.</p>
+        <ul class="bl1">
+            <li>성명, 영문명, 국내거소신고번호, 신분증/신분서류 발급일·기관, 연락처(휴대폰, 자택, 직장), 주소(자택,직장), 이메일, 직장명, 부서, 직위, 성별, 국적, 음성data, CI(연계정보), DI(중복가입확인정보), 차량정보(차대번호, 차량번호), 식별정보 변경이력, 기타 (금융)거래관계 및 서비스의 설정·유지·이행·관리·개선 등과 관련하여 본인이 제공한 정보,</li>
+            <li>이용자의 브라우저 종류 및 OS, 검색어, 서비스 이용 기록, IP Address, Mac address, CPU ID, HDD S/N, IMEI(안드로이드 9버전 이하만 수집), UUID, 방문일시, 결제기록, 쿠키</li>
+            <li>자동납부정보(가입자명, 통신회사, 통신요금정보, 전기사용정보, 가스사용 정보, 아파트 관리비 정보, 아파트임대료 정보, 유치원ㆍ초중고교 등 학부모부담금 납부정보, 사회보험료 납부정보, 세금 납부정보, 제휴사 멤버십 정보 등)</li>
+        </ul>
+        <p class="lpop-tit">개인정보 이용 제공 동의</p>        
+        <ul class="bl2">
+            <li>OTT/스트리밍 15% 결제일 할인</li>
+            <li>이동통신요금 자동이체 5% 결제일 할인</li>
+            <li>편의점 5% 결제일 할인</li>
+        </ul>
+        <p class="lpop-desc txt-tab">※ 해당 금융거래가 변제나 이에 준하는 방식으로 거래가 종료된 경우에도 일정기간 개인신용평점의 산정에 영향을 줄 수 있습니다.</p>
+        <p class="lpop-desc txt-tab">※ 평균적으로 연체율이 높은 형태의 신용공여는 일반적인 신용공여보다 신용점수가 더 큰 폭으로 하락할 수 있습니다.</p>
+        <p class="lpop-tit">서비스 제공 조건</p>
+        <table summary="서비스 제공 조건 안내 표입니다." class="lpop-tb-type1">
+            <caption>서비스 제공 조건 안내 표</caption>
+            <colgroup>
+                <col style="width:36%;">
+                <col style="width:25%;">
+                <col style="width:auto;">
+            </colgroup>
+            <thead>
+                <tr class="row01">
+                    <th scope="col">전월 실적</th>
+                    <th scope="col">통합<br>할인한도</th>
+                    <th scope="col">통합한도 이내<br>대중교통<br>할인한도</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tac">30만원 이상 ~<br>60만원 미만</td>
+                    <td class="tac">10,000원</td>
+                    <td class="tac">(7,000원)</td>
+                </tr>
+                <tr>
+                    <td class="tac">60만원 이상 ~<br>100만원 미만 </td>
+                    <td class="tac">20,000원</td>
+                    <td class="tac">(12,000원)</td>
+                </tr>
+                <tr>
+                    <td class="tac">100만원 이상</td>
+                    <td class="tac">30,000원</td>
+                    <td class="tac">(15,000원)</td>
+                </tr>
+            </tbody>
+        </table>
+        <ol class="numl">
+            <li>① 카드사의 휴업·파산·경영상의 위기 등에 따른 불가피한 경우</li>
+            <li>①의2. 제휴업체의 휴업·파산·경영상의 위기로 인해 불가피하게 부가서비스를 축소·변경하는 경우로서 다른 제휴업체를 통해 동종의 유사한 부가서비스 제공이 불가한 경우</li>
+            <li>② 제휴업체가 카드사의 의사에 반하여 해당 부가서비스를 축소하거나 변경 시, 당초 부가서비스에 상응하는 다른 부가서비스를 제공하는 경우</li>
+            <li>③ 부가서비스를 3년 이상 제공한 상태에서 해당 부가서비스로 인해 상품의 수익성이 현저히 낮아진 경우</li>
+        </ol>
+    </div>
+    <div class="lpop-btn-box">
+        <a href="#;" class="btn agree" onclick="fnSubmitTerms2('this')">동의하기</a>
+    </div>
+</div>
+
+<div id="lpopTerms3" class="lpop-wrap terms3">
+    <div class="lpop-header">
+        <h3 class="lpop-tit">3. 개인정보 이용 제공 동의</h3>
+        <a href="#;" class="btn-close" onclick="fnCloseTerms(this);">닫기</a>
+    </div>
+    <div class="lpop-body">
+        <p class="lpop-tit">개인정보 이용 제공 동의</p>
+        <p class="lpop-desc">귀하는 개인신용정보 수집·이용, 조회 및 제공 동의에 대해 거부하실 수 있습니다. 다만, 개인(신용)정보 수집·이용, 조회 및 제공에 관한 동의는 상거래관계의 설정, 유지에 필수적이거나, 상거래관계에 따라 귀하에게 제공되는 서비스와 직접적으로 관련된 필수적 사항이므로, 아래의 사항에 동의하셔야만 (금융)거래관계의 설정 및 유지가 가능합니다.</p>
+        <ul class="bl1">
+            <li>성명, 영문명, 국내거소신고번호, 신분증/신분서류 발급일·기관, 연락처(휴대폰, 자택, 직장), 주소(자택,직장), 이메일, 직장명, 부서, 직위, 성별, 국적, 음성data, CI(연계정보), DI(중복가입확인정보), 차량정보(차대번호, 차량번호), 식별정보 변경이력, 기타 (금융)거래관계 및 서비스의 설정·유지·이행·관리·개선 등과 관련하여 본인이 제공한 정보,</li>
+            <li>이용자의 브라우저 종류 및 OS, 검색어, 서비스 이용 기록, IP Address, Mac address, CPU ID, HDD S/N, IMEI(안드로이드 9버전 이하만 수집), UUID, 방문일시, 결제기록, 쿠키</li>
+            <li>자동납부정보(가입자명, 통신회사, 통신요금정보, 전기사용정보, 가스사용 정보, 아파트 관리비 정보, 아파트임대료 정보, 유치원ㆍ초중고교 등 학부모부담금 납부정보, 사회보험료 납부정보, 세금 납부정보, 제휴사 멤버십 정보 등)</li>
+        </ul>
+        <p class="lpop-tit">개인정보 이용 제공 동의</p>        
+        <ul class="bl2">
+            <li>OTT/스트리밍 15% 결제일 할인</li>
+            <li>이동통신요금 자동이체 5% 결제일 할인</li>
+            <li>편의점 5% 결제일 할인</li>
+        </ul>
+        <p class="lpop-desc txt-tab">※ 해당 금융거래가 변제나 이에 준하는 방식으로 거래가 종료된 경우에도 일정기간 개인신용평점의 산정에 영향을 줄 수 있습니다.</p>
+        <p class="lpop-desc txt-tab">※ 평균적으로 연체율이 높은 형태의 신용공여는 일반적인 신용공여보다 신용점수가 더 큰 폭으로 하락할 수 있습니다.</p>
+        <p class="lpop-tit">서비스 제공 조건</p>
+        <table summary="서비스 제공 조건 안내 표입니다." class="lpop-tb-type1">
+            <caption>서비스 제공 조건 안내 표</caption>
+            <colgroup>
+                <col style="width:36%;">
+                <col style="width:25%;">
+                <col style="width:auto;">
+            </colgroup>
+            <thead>
+                <tr class="row01">
+                    <th scope="col">전월 실적</th>
+                    <th scope="col">통합<br>할인한도</th>
+                    <th scope="col">통합한도 이내<br>대중교통<br>할인한도</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tac">30만원 이상 ~<br>60만원 미만</td>
+                    <td class="tac">10,000원</td>
+                    <td class="tac">(7,000원)</td>
+                </tr>
+                <tr>
+                    <td class="tac">60만원 이상 ~<br>100만원 미만 </td>
+                    <td class="tac">20,000원</td>
+                    <td class="tac">(12,000원)</td>
+                </tr>
+                <tr>
+                    <td class="tac">100만원 이상</td>
+                    <td class="tac">30,000원</td>
+                    <td class="tac">(15,000원)</td>
+                </tr>
+            </tbody>
+        </table>
+        <ol class="numl">
+            <li>① 카드사의 휴업·파산·경영상의 위기 등에 따른 불가피한 경우</li>
+            <li>①의2. 제휴업체의 휴업·파산·경영상의 위기로 인해 불가피하게 부가서비스를 축소·변경하는 경우로서 다른 제휴업체를 통해 동종의 유사한 부가서비스 제공이 불가한 경우</li>
+            <li>② 제휴업체가 카드사의 의사에 반하여 해당 부가서비스를 축소하거나 변경 시, 당초 부가서비스에 상응하는 다른 부가서비스를 제공하는 경우</li>
+            <li>③ 부가서비스를 3년 이상 제공한 상태에서 해당 부가서비스로 인해 상품의 수익성이 현저히 낮아진 경우</li>
+        </ol>
+    </div>
+    <div class="lpop-btn-box">
+        <a href="#;" class="btn agree" onclick="fnSubmitTerms3('this')">동의하기</a>
+    </div>
+</div>
+
+<div id="lpopTerms4" class="lpop-wrap terms4">
+    <div class="lpop-header">
+        <h3 class="lpop-tit">4. 개인정보 이용 제공 동의</h3>
+        <a href="#;" class="btn-close" onclick="fnCloseTerms(this);">닫기</a>
+    </div>
+    <div class="lpop-body">
+        <p class="lpop-tit">개인정보 이용 제공 동의</p>
+        <p class="lpop-desc">귀하는 개인신용정보 수집·이용, 조회 및 제공 동의에 대해 거부하실 수 있습니다. 다만, 개인(신용)정보 수집·이용, 조회 및 제공에 관한 동의는 상거래관계의 설정, 유지에 필수적이거나, 상거래관계에 따라 귀하에게 제공되는 서비스와 직접적으로 관련된 필수적 사항이므로, 아래의 사항에 동의하셔야만 (금융)거래관계의 설정 및 유지가 가능합니다.</p>
+        <ul class="bl1">
+            <li>성명, 영문명, 국내거소신고번호, 신분증/신분서류 발급일·기관, 연락처(휴대폰, 자택, 직장), 주소(자택,직장), 이메일, 직장명, 부서, 직위, 성별, 국적, 음성data, CI(연계정보), DI(중복가입확인정보), 차량정보(차대번호, 차량번호), 식별정보 변경이력, 기타 (금융)거래관계 및 서비스의 설정·유지·이행·관리·개선 등과 관련하여 본인이 제공한 정보,</li>
+            <li>이용자의 브라우저 종류 및 OS, 검색어, 서비스 이용 기록, IP Address, Mac address, CPU ID, HDD S/N, IMEI(안드로이드 9버전 이하만 수집), UUID, 방문일시, 결제기록, 쿠키</li>
+            <li>자동납부정보(가입자명, 통신회사, 통신요금정보, 전기사용정보, 가스사용 정보, 아파트 관리비 정보, 아파트임대료 정보, 유치원ㆍ초중고교 등 학부모부담금 납부정보, 사회보험료 납부정보, 세금 납부정보, 제휴사 멤버십 정보 등)</li>
+        </ul>
+        <p class="lpop-tit">개인정보 이용 제공 동의</p>        
+        <ul class="bl2">
+            <li>OTT/스트리밍 15% 결제일 할인</li>
+            <li>이동통신요금 자동이체 5% 결제일 할인</li>
+            <li>편의점 5% 결제일 할인</li>
+        </ul>
+        <p class="lpop-desc txt-tab">※ 해당 금융거래가 변제나 이에 준하는 방식으로 거래가 종료된 경우에도 일정기간 개인신용평점의 산정에 영향을 줄 수 있습니다.</p>
+        <p class="lpop-desc txt-tab">※ 평균적으로 연체율이 높은 형태의 신용공여는 일반적인 신용공여보다 신용점수가 더 큰 폭으로 하락할 수 있습니다.</p>
+        <p class="lpop-tit">서비스 제공 조건</p>
+        <table summary="서비스 제공 조건 안내 표입니다." class="lpop-tb-type1">
+            <caption>서비스 제공 조건 안내 표</caption>
+            <colgroup>
+                <col style="width:36%;">
+                <col style="width:25%;">
+                <col style="width:auto;">
+            </colgroup>
+            <thead>
+                <tr class="row01">
+                    <th scope="col">전월 실적</th>
+                    <th scope="col">통합<br>할인한도</th>
+                    <th scope="col">통합한도 이내<br>대중교통<br>할인한도</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tac">30만원 이상 ~<br>60만원 미만</td>
+                    <td class="tac">10,000원</td>
+                    <td class="tac">(7,000원)</td>
+                </tr>
+                <tr>
+                    <td class="tac">60만원 이상 ~<br>100만원 미만 </td>
+                    <td class="tac">20,000원</td>
+                    <td class="tac">(12,000원)</td>
+                </tr>
+                <tr>
+                    <td class="tac">100만원 이상</td>
+                    <td class="tac">30,000원</td>
+                    <td class="tac">(15,000원)</td>
+                </tr>
+            </tbody>
+        </table>
+        <ol class="numl">
+            <li>① 카드사의 휴업·파산·경영상의 위기 등에 따른 불가피한 경우</li>
+            <li>①의2. 제휴업체의 휴업·파산·경영상의 위기로 인해 불가피하게 부가서비스를 축소·변경하는 경우로서 다른 제휴업체를 통해 동종의 유사한 부가서비스 제공이 불가한 경우</li>
+            <li>② 제휴업체가 카드사의 의사에 반하여 해당 부가서비스를 축소하거나 변경 시, 당초 부가서비스에 상응하는 다른 부가서비스를 제공하는 경우</li>
+            <li>③ 부가서비스를 3년 이상 제공한 상태에서 해당 부가서비스로 인해 상품의 수익성이 현저히 낮아진 경우</li>
+        </ol>
+    </div>
+    <div class="lpop-btn-box">
+        <a href="#;" class="btn agree" onclick="fnSubmitTerms4('this')">동의하기</a>
+    </div>
+</div>
+
+<script type="text/javascript">
+       
+    $(document).ready(function(){
+
+        fnChecking();
+
+    });
+
+    function fnChecking(){
+        $('.terms-list-box .terms').on('change', function(){
+            if($('.terms-list-box .terms').length == $('.terms-list-box .terms:checked').length){
+                $('.terms-box #all').prop('checked', true)
+            }else{
+                $('.terms-box #all').prop('checked', false)
+            }
+        });
+    }
+
+    function fnOpTerms(obj){
+        let dimmed = $('.dimmed');
+
+        $(this).closest('input').prop('checked', false);
+        $('.lpop-wrap').show();
+        dimmed.show();
+        $('body').addClass('stop-scroll');
+    }
+
+    function fnCloseTerms(obj){
+        let dimmed = $('.dimmed');
+        
+        dimmed.hide();
+        $('.lpop-wrap').hide();
+        $('body').removeClass('stop-scroll');
+    }
+
+    function fnSubmitTerms1(){
+        let layer = $('#lpopTerms1');
+        let dimmed = $('.dimmed');
+        
+        layer.hide();
+        dimmed.hide();
+
+        $('#terms1').prop('checked', true);
+
+    }
+
+    function fnSubmitTerms2(){
+        let layer = $('#lpopTerms2');
+        let dimmed = $('.dimmed');
+        
+        layer.hide();
+        dimmed.hide();
+
+        $('#terms2').prop('checked', true);
+
+    }
+
+    function fnSubmitTerms3(){
+        let layer = $('#lpopTerms3');
+        let dimmed = $('.dimmed');
+        
+        layer.hide();
+        dimmed.hide();
+
+        $('#terms3').prop('checked', true);
+
+    }
+
+    function fnSubmitTerms4(){
+        let layer = $('#lpopTerms4');
+        let dimmed = $('.dimmed');
+        
+        layer.hide();
+        dimmed.hide();
+
+        $('#terms4').prop('checked', true);
+
+    }    
+</script>  
+
+<div id="terms2" class="lpop-wrap"></div>
+<div id="terms3" class="lpop-wrap"></div>
+<div id="terms4" class="lpop-wrap"></div>
+
+<footer id="footer"></footer>
+
+</body>
+</html>
