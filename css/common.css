@@ -102,14 +102,15 @@ br.mo {display:none;}
 
 /* media query */
 @media screen and (max-width:800px) {
-    #main {padding:60px 0 40px;}
+    #main {padding:40px 0 40px;}
+    
     #section1 .container .top-box {padding:0 0 40px; border-bottom:1px solid #ddd;}
     #section1 .container .top-box .top-tit {font-size:30px; font-weight:700; line-height:normal;}
     #section1 .container .top-box .top-desc {font-size:16px; font-weight:400;}
     #section1 .container .input-box .wrap {padding:30px 0 0;}
-    #section1 .container .input-box .wrap .tit {font-size:26px; font-weight:700; line-height:normal; margin-bottom:20px;}
+    #section1 .container .input-box .wrap .tit {font-size:22px; margin-bottom:20px;}
     #section1 .btn-wrap {display:flex; align-content:center; justify-content:center; margin-top:60px;}
-    #section1 .btn-wrap .btn.apply {font-size:18px; font-weight:700; color:#000; padding:24px 60px 24px 30px; background:url('../images/ico_arr_64.png') right 16px center / 20px auto no-repeat; border:3px solid #000;}
+    #section1 .btn-wrap .btn.apply {font-size:18px; font-weight:700; color:#000; padding:20px 60px 20px 30px; background:url('../images/ico_arr_64.png') right 16px center / 20px auto no-repeat; border:3px solid #000;}
 
     #footer .footer-wrap .terms-box {display:flex; flex-direction:column;}
     #footer .footer-wrap .terms-box a {flex:0; font-family: 'Noto Sans KR', sans-serif; font-weight:700; color:#000; padding:10px 20px; border:2px solid #000; box-sizing:border-box; box-shadow: 4px 4px #000;}
