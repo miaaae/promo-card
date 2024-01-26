@@ -1,5 +1,19 @@
 $(document).ready(function(){        
 
+    // mobile menu
+    $('.mo-btn').click(function(){
+        $('.mo-menu-wrap').addClass('on');
+        $('.dimmed').show();
+        $('body').addClass('stop-scroll');
+    });
+
+    $('.mo-menu-wrap .menu-close .btn-close').click(function(){
+        $('.mo-menu-wrap').removeClass('on');
+        $('.dimmed').hide();
+        $('body').removeClass('stop-scroll');
+
+    });    
+
     $('#all').click(function(){
         if(this.checked == true){
             $('.terms-list-box .terms').prop('checked', true);
