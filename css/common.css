@@ -20,6 +20,8 @@ caption {overflow:hidden; width:0; height:0; text-indent:-9999px;}
 #header .main-header-wrap .main-menu-wrap .login-wrap {margin-left:100px;}
 #header .main-header-wrap .main-menu-wrap .login-wrap a {display:inline-block; padding:4px 16px; border:2px solid #000; font-weight:700; font-size:14px; line-height:normal;}
 
+#header .mo-menu-wrap {display:none;}
+
 /* custom style */
 .blind {font-size:0; line-height:0; width:0; height:0; opacity:0; padding:0; margin:0; border:0;}
 
@@ -112,6 +114,7 @@ br.mo {display:none;}
 
 /* media query */
 @media screen and (max-width:800px) {
+    #wrap {overflow-x:hidden;}
     #main {padding:40px 0 40px;}
 
     #header .main-header-wrap .logo-wrap {width:100%;}

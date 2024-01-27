@@ -2,6 +2,7 @@ $(document).ready(function(){
 
     // mobile menu
     $('.mo-btn').click(function(){
+        $('.mo-menu-wrap').show();
         $('.mo-menu-wrap').addClass('on');
         $('.dimmed').show();
         $('body').addClass('stop-scroll');
