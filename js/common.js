@@ -18,13 +18,11 @@ $(document).ready(function(){
     // 약관 전체 동의하기
     $('#all').click(function(e){
         if(this.checked == true){
-            $('.terms-list-box .terms').prop('checked', true);
+            $('.terms-list-box .terms').prop('checked', true);            
         }else{
             $('.terms-list-box .terms').prop('checked', false);
         }
     });
-    
-    $('#all').focus();
 
     // 약관팝업 닫기
     $('.btn-close').click(function(){
