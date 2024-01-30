@@ -3,7 +3,7 @@
 @import url('base.css');
 
 #section1 {padding:100px 0 0px;}
-.sec-wrap {max-width:960px; padding:80px 20px 60px; margin:0 auto; overflow:hidden;}
+.sec-wrap {max-width:960px; padding:80px 20px 60px; margin:0 auto;}
 .sec-wrap .sec-tit {font-family: 'Shrikhand', serif; font-size:32px; line-height:normal;}
 .sec-wrap .desc {font-size:16px; line-height:normal; margin-top:12px;}
 .sec-wrap .desc + .desc {margin-top:3px}
