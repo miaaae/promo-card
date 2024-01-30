@@ -143,14 +143,14 @@
                         const swiper = new Swiper('.swiper.main-wrap', {
                             slidesPerView: 'auto',
                             centeredSlides: true, 
-                            spaceBetween: 10,
+                            spaceBetween: 8,
                             slidesPerGroup: 1,
                             autoplay: {
                                 delay: 3000,
                                 disableOnInteraction: false,
                             },
                             loop: true,
-                            loopedSlides: 2,
+                            loopedSlides: 1,
                             pagination: {
                                 el: '.swiper-pagination',
                                 clickable : true,
@@ -470,10 +470,10 @@
 
 <script type="text/javascript">
     $(document).ready(function(){
-
-        $('.info-pop-wrap').show();
-        $('.dimmed').show();
-        $('body').addClass('stop-scroll');
+        $('.info-pop-wrap').hide();
+        // $('.info-pop-wrap').show();
+        // $('.dimmed').show();
+        // $('body').addClass('stop-scroll');
     });
 
     function fnCloseInfo(){
