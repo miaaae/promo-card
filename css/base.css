@@ -47,7 +47,9 @@ br.mo {display:none;}
 .stop-scroll {position:relative; overflow:hidden}
 .dimmed {display:none; position:fixed; top:0; right:0; bottom:0; left:0; z-index:30; width:100%; height:auto; background:rgba(0,0,0,.5);}
 
-
+.info-pop-wrap {position:absolute; z-index: 99999; top:6%; left:50%; transform:translateX(-50%)}
+.info-pop-wrap .pop-box {font-family: 'Noto Sans KR', sans-serif; font-size:14px; word-break:keep-all; line-height:normal; display:block; width:200px; height:140px; background:#fff; padding:20px; border-radius:14px;}
+.info-pop-wrap .pop-box button {margin-top:20px; display:block; width:100%; padding:5px 0; font-family: 'Noto Sans KR', sans-serif; font-size:14px; background:#fff; border:2px solid #000;}
 
 /* media query */
 @media screen and (max-width:800px) {
