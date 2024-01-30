@@ -3,7 +3,7 @@
 @import url('base.css');
 
 /* main*/
-#main {padding:60px 0 60px;}
+#main {padding:120px 0 60px;}
 #section1 {display:block; width:min(100%, 800px); margin:0 auto;}
 #section1 .container {position:relative; padding:0 24px;}
 #section1 .container .top-box {padding:0 0 30px;}
@@ -86,7 +86,7 @@ table.lpop-tb-type1 th:last-child, table.lpop-tb-type1 td:last-child {border-rig
 /* media query */
 @media screen and (max-width:800px) {
     #wrap {overflow-x:hidden;}
-    #main {padding:40px 0 40px;}
+    #main {padding:100px 0 40px;}
 
     #section1 .container .top-box {padding:0 0 40px;}
     #section1 .container .top-box .top-tit {font-size:26px; font-weight:700; line-height:normal;}
