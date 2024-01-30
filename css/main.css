@@ -17,7 +17,7 @@
 #section2 .card-selc-wrap .card-list .card-list-wrap {display:flex; flex-wrap:wrap; gap:50px 0;}
 #section2 .card-selc-wrap .card-list .card-list-wrap .list {display:flex; flex-direction:column; align-items:center; width:20%;}
 #section2 .card-selc-wrap .card-list .card-list-wrap .list .card-img-wrap {padding:0 0;}
-#section2 .card-selc-wrap .card-list .card-list-wrap .list .card-img-wrap img {max-width:140px; width:100%;}
+#section2 .card-selc-wrap .card-list .card-list-wrap .list .card-img-wrap img {max-width:140px; width:100%; box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.2);}
 #section2 .card-selc-wrap .card-list .card-list-wrap .list .card-name {font-family: 'Noto Sans KR', sans-serif; font-size:16px; font-weight:700; line-height:normal; margin-top:12px;}
 #section2 .card-selc-wrap .card-list .card-list-wrap .list .card-desc {font-family: 'Noto Sans KR', sans-serif; font-size:14px; font-weight:400; line-height:normal; margin-top:2px;}
 #section2 .card-selc-wrap .card-list .card-list-wrap .list .card-btn {margin-top:10px;}
@@ -88,6 +88,7 @@
     #section2 .card-selc-wrap .card-list .card-list-wrap .list .card-img-wrap {padding:0 2px;}
 
     .sec-wrap.type-wide.bg1 {padding:100px 20px 60px;}
+    .sec-wrap.type-wide .wide-wrap {max-width:960px; padding:20px 20px 0px; margin:0 auto;}
 
     #section3 .flex-wrap {display:flex; flex-direction:column; position:relative;}
     #section3 .flex-wrap:before {content:''; width:340px; height:340px; position:absolute; left:-127px; bottom:-44px; background:url('../images/img_sec3_01.png') center center / cover no-repeat;}
