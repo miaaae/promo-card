@@ -65,7 +65,7 @@
 .main-slider .main-wrap .main-cont .main-txt-box {flex:1;}
 .main-slider .main-wrap .main-cont .main-tit {font-family: 'Noto Sans KR', sans-serif; font-size:22px; font-weight:700; line-height:normal; margin-bottom:8px;}
 .main-slider .main-wrap .main-cont .main-desc {font-family: 'Noto Sans KR', sans-serif; font-size:18px; font-weight:400; line-height:normal;}
-.main-slider .main-wrap .main-cont .main-txt-box .btn-slide {display:inline-block; text-align:center; margin-top:16px; padding:8px 18px; border:2px solid rgba(0,0,0,.2); font-size:14px; font-weight:700; color:#333; box-sizing:border-box;}
+.main-slider .main-wrap .main-cont .main-txt-box .btn-slide {display:inline-block; text-align:center; margin-top:16px; padding:12px 18px; border:2px solid rgba(0,0,0,.2); font-size:14px; font-weight:700; color:#333; box-sizing:border-box;}
 .main-slider .main-wrap .main-cont .main-txt-box .btn-slide:hover {border:2px solid rgba(0,0,0,1); background:#fff; color:#000;}
 
 .main-slider .main-wrap .main-cont {background:radial-gradient(circle, rgba(255,240,246,1) 0%, rgba(238,246,255,1) 100%);}
