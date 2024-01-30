@@ -82,6 +82,7 @@ table.lpop-tb-type1 th:last-child, table.lpop-tb-type1 td:last-child {border-rig
 .card-apply-banner .swiper-pagination {bottom:5px;}
 .card-apply-banner .swiper-pagination-bullet-active {background:#333;}
 
+.info {color:#888; margin-top:10px; font-size:15px; line-height:normal; padding-left:18px; text-indent:-18px; word-break:keep-all;}
 
 /* media query */
 @media screen and (max-width:800px) {
