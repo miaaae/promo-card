@@ -30,7 +30,6 @@
 <script src='https://code.jquery.com/jquery-3.7.0.min.js' crossorigin='anonymous'></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src='./js/main.js' defer></script>
-<script src='./js/card.js' defer></script>
 
 </head>
 <body class="">
@@ -63,89 +62,104 @@
                     <a href="#;" class="btn-close"">닫기</a>
                 </div>
             </div>
-        </div>
-        <!-- mobile menu -->
-        <!-- <div class="mo-menu-wrap">
-            <nav class="mobile-menu">
-                <ul class="list">
-                    <li><a href="#;" title="새 창 열림">카드소개</a></li>
-                    <li><a href="#;" title="새 창 열림">이벤트</a></li>
-                    <li><a href="#;" title="새 창 열림">고객센터</a></li>
-                </ul>
-            </nav>
-            <div class="login-wrap">
-                <a href="#;">My Account</a>
-            </div>
-            <div class="menu-close">
-                <a href="#;" class="btn-close"">닫기</a>
-            </div>
-        </div> -->
-        <!--// mobile-menu -->    
+        </div> 
     </header>
+    <!-- mobile menu -->
+    <div class="main-menu-wrap mo">
+        <nav class="main-menu">
+            <ul class="list">
+                <li><a href="#;" title="새 창 열림">카드소개</a></li>
+                <li><a href="#;" title="새 창 열림">이벤트</a></li>
+                <li><a href="#;" title="새 창 열림">고객센터</a></li>
+            </ul>
+        </nav>
+        <div class="login-wrap">
+            <a href="#;">My Account</a>
+        </div>
+        <div class="menu-close">
+            <a href="#;" class="btn-close"">닫기</a>
+        </div>
+    </div>
+     <!--// mobile menu -->
     <main id="main">
         <section id="section1">
             <div class="container">
                 <div class="main-slider">
-                    <div class="swiper main-wrap" navigation="true">
+                    <div class="swiper main-wrap">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <a href="#;" class="main-cont">
+                                <div class="main-cont type-dark" style="background:#1988ff;">
                                     <div class="main-thumb"><img src="./images/main_slide01.png" alt=""></div>
-                                    <div class="main-txt">
-                                        <p class="main-tit">사랑받는 집사가 되는 법</p>
-                                        <p class="main-desc">간편결제로 적립하는 올디머니가 매월 500p</p>
-                                    </div>                                    
-                                </a>
+                                    <div class="main-txt-box">
+                                        <p class="main-tit">사랑받는 집사가 되는 법✨</p>
+                                        <p class="main-desc">올디 카드로 펫 미용 결제 시 올디 머니 즉시 적립</p>
+                                        <a href="#;" title="새 창 열림" class="btn-slide type-dark">혜택안내 바로가기</a>
+                                    </div>
+                                </div>
                             </div>
                             <div class="swiper-slide">
-                                <a href="#;" class="main-cont" style="background:linear-gradient(51deg, rgba(251,237,230,1) 26%, rgba(241,255,220,1) 100%);">
+                                <div class="main-cont" style="background:#ffe2df;">
                                     <div class="main-thumb"><img src="./images/main_slide02.png" alt=""></div>
-                                    <div class="main-txt">
+                                    <div class="main-txt-box">
                                         <p class="main-tit">매월 마지막주 수요일은 문화의 날</p>
                                         <p class="main-desc">올디 카드에서 문화생활하고 캐시백 받으세요</p>
-                                    </div>                                    
-                                </a>
+                                        <a href="#;" title="새 창 열림" class="btn-slide">이벤트 바로가기</a>
+                                    </div>
+                                </div>
                             </div>
                             <div class="swiper-slide">
-                                <a href="#;" class="main-cont" style="">
+                                <div class="main-cont">
                                     <div class="main-thumb"><img src="./images/main_slide03.png" alt=""></div>
-                                    <div class="main-txt">
+                                    <div class="main-txt-box">
                                         <p class="main-tit">집순이들을 위한 맞춤 혜택</p>
                                         <p class="main-desc">OTT 자동결제 하고 월 최대 1만원 할인받자</p>
-                                    </div>                                    
-                                </a>
-                            </div>                            
-                            <div class="swiper-slide">
-                                <a href="#;" class="main-cont">
-                                    <div class="main-thumb"><img src="./images/main_slide04.png" alt=""></div>
-                                    <div class="main-txt">
-                                        <p class="main-tit">넷플릭스 등록은 올디 카드로 시작하세요</p>
-                                        <p class="main-desc">정기결제 등록 시 추가 할인까지</p>
-                                    </div>                                    
-                                </a>
+                                        <a href="#;" title="새 창 열림" class="btn-slide">이벤트 바로가기</a>
+                                    </div>
+                                </div>
                             </div>
                             <div class="swiper-slide">
-                                <a href="#;" class="main-cont type-dark" style="background:url('./images/main_slide05.jpg') center center / cover no-repeat;">
-                                    <div class="main-thumb"><img src="./images/main_slide_default.png" alt=""></div>
-                                    <div class="main-txt">
-                                        <p class="main-tit">넷플릭스 등록은 올디 카드로 시작하세요</p>
+                                <div class="main-cont type-dark" style="background:url('./images/main_slide07.jpg') left center / cover no-repeat;">
+                                    <div class="main-thumb"><img src="./images/main_slide04.png" alt=""></div>
+                                    <div class="main-txt-box">
+                                        <p class="main-tit"><strong style="color:#ed0000">넷플릭스</strong> 등록은 올디 카드로 시작하세요</p>
                                         <p class="main-desc">정기결제 등록 시 추가 할인까지</p>
-                                    </div>                                    
-                                </a>
+                                        <a href="#;" title="새 창 열림" class="btn-slide type-bg">혜택안내 바로가기</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div href="#;" class="main-cont type-dark" style="background:url('./images/main_slide06.jpg') left center / cover no-repeat;">
+                                    <div class="main-thumb"><img src="./images/main_slide_default.png" alt=""></div>
+                                    <div class="main-txt-box">
+                                        <p class="main-tit">부서지는 파도와 반짝이는 윤슬, 일상에 찾아오는 휴식</p>
+                                        <p class="main-desc">Ordinary Traveler가 다녀온 호주의 바다</p>
+                                        <a href="#;" title="새 창 열림" class="btn-slide type-dark">블로그 바로가기</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
+                        <div class="swiper-btn-wrap">
+                            <div class="swiper-pagination"></div>
+                            <button class="pause">정지</button>
+                        </div>
                     </div>
                     <script>
                         const swiper = new Swiper('.swiper.main-wrap', {
-                            slidesPerView: 1.2,
+                            slidesPerView: 'auto',
                             centeredSlides: true, 
-                            spaceBetween: 10,
+                            spaceBetween: 6,
                             slidesPerGroup: 1,
-                            autoplay: false,
-                            loop: true,                                                        
-                            pagination: false,
+                            autoplay: {
+                                delay: 3000,
+                                disableOnInteraction: false,
+                            },
+                            loop: true,
+                            loopedSlides: 1,
+                            pagination: {
+                                el: '.swiper-pagination',
+                                clickable : true,
+                                type : 'fraction'
+                            },
                             navigation: {
                                 nextEl: ".swiper-button-next",
                                 prevEl: ".swiper-button-prev",
@@ -155,8 +169,26 @@
                                 prevSlideMessage: '이전 슬라이드',
                                 nextSlideMessage: '다음 슬라이드',   
                                 slideLabelMessage: '총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.',
-                            }
+                            },
+                            
                         });
+
+                        $(document).ready(function(){
+                            let sw = 0;
+                            $('.main-wrap .pause').click(function(){
+                                if(sw==0){
+                                    $('.pause').addClass('on');
+                                    $('.pause').html('재생');
+                                    swiper.autoplay.stop();
+                                    sw = 1;
+                                }else{
+                                    $('.pause').removeClass('on');
+                                    $('.pause').html('정지');
+                                    swiper.autoplay.start();
+                                    sw = 0;
+                                }
+                            });
+                        });                        
                     </script>
                 </div>
             </div>           
@@ -165,30 +197,6 @@
             <!-- 카드 상품 리스트 -->
             <h2 class="sec-tit">Select your Days.</h2>
             <div class="card-selc-wrap">
-                <div class="card-filter-wrap">
-                    <form id="card-filter" class="filter-form">
-                        <span class="form-item">
-                            <input type="radio" name="filter" id="filter-all" value="all" checked>
-                            <label for="filter-all">All</label>
-                        </span>
-                        <span class="form-item">
-                            <input type="radio" name="filter" id="filter-happy" value="happy">
-                            <label for="filter-happy">happy</label>
-                        </span>
-                        <span class="form-item">
-                            <input type="radio" name="filter" id="filter-love" value="love">
-                            <label for="filter-love">love</label>
-                        </span>
-                        <span class="form-item">
-                            <input type="radio" name="filter" id="filter-joy" value="joy">
-                            <label for="filter-joy">joy</label>
-                        </span>
-                        <span class="form-item">
-                            <input type="radio" name="filter" id="filter-gloomy" value="gloomy">
-                            <label for="filter-gloomy">gloomy</label>
-                        </span>
-                    </form>
-                </div>
                 <div class="card-list">
                     <ul class="card-list-wrap">
                         <li class="list">
@@ -296,7 +304,7 @@
             </div>
         </section>
         <div class="mid-bnr-wrap">
-            <p>올디 카드로 하루의 습관을 채워보세요. 할인과 적립을 한 번에!</p>
+            <p>올디 카드로 하루의 습관을 채워보세요. <br class="mo">할인과 적립을 한 번에!</p>
         </div>
         <section id="section3" class="sec-wrap type-wide bg1">
             <div class="wide-wrap">
@@ -319,7 +327,11 @@
                 <div class="pc">
                     <img src="./images/img_sec3_02_l.png" alt="">
                     <img src="./images/img_sec3_03_l.png" alt="">
-                </div>                
+                </div>
+                <div class="mo">
+                    <img src="./images/img_sec3_02_l.png" alt="">
+                    <img src="./images/img_sec3_03_l.png" alt="">
+                </div> 
             </div>
         </section>
         <section id="section4" class="sec-wrap">
@@ -343,28 +355,34 @@
     <footer id="footer">
         <div class="footer-wrap">
             <p class="footer-tit">Ordinary Days, <br class="mo">special you.</p>
-            <div class="adress-box">
-                <p>서울시 중구 을지로 170 올디카드(주) 대표이사 올디</p>
-                <div class="info">
-                    <p>사업자번호 000-00-00000</p>
-                    <p>통신판매업 신고번호 제 2024-서울중구-0000호</p>
+            <div class="flex-box">
+                <div class="cont">
+                    <div class="adress-box">
+                        <p>서울시 중구 을지로 170 올디카드(주) 대표이사 올디</p>
+                        <div class="info">
+                            <p>사업자번호 000-00-00000</p>
+                            <p>통신판매업 신고번호 제 2024-서울중구-0000호</p>
+                        </div>
+                    </div>
+                    <div class="family-site">
+                        <ul>
+                            <li><a href="#;" title="새 창 열림">회원가입</a></li>
+                            <li><a href="#;" title="새 창 열림">고객센터</a></li>
+                            <li><a href="#;" title="새 창 열림">FAQ</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="family-site">
-                <ul>
-                    <li><a href="#;" title="새 창 열림">회원가입</a></li>
-                    <li><a href="#;" title="새 창 열림">고객센터</a></li>
-                    <li><a href="#;" title="새 창 열림">FAQ</a></li>
-                </ul>
-            </div>
-            <div class="terms-box">
-                <a href="#;" title="새 창 열림">개인정보처리방침</a>
-                <a href="#;" title="새 창 열림">이용약관</a>
+                <div>
+                    <div class="terms-box">
+                        <a href="#;" title="새 창 열림">개인정보처리방침</a>
+                        <a href="#;" title="새 창 열림">이용약관</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>    
 </div>
-
+<div class="dimmed"></div>
 <script type="text/javascript"></script>
 
 </body>

@@ -44,9 +44,6 @@
 .numl li {padding-left:20px; text-indent:-20px;}
 
 /* layer popup */
-.stop-scroll {position:relative; overflow:hidden}
-.dimmed {display:none; position:fixed; top:0; right:0; bottom:0; left:0; z-index:10; width:100%; height:auto; background:rgba(0,0,0,.3);}
-
 .lpop-wrap {display:none; position:fixed; z-index:100; top:50%; left:50%; transform:translate(-50%, -50%); width:600px; background:#fff; border-radius:20px; box-sizing:border-box; box-shadow:0px 0px 20px rgba(0,0,0,.3);}
 .lpop-wrap .lpop-header {display:flex; flex-direction:row; align-items:center; padding:20px 20px; border-radius:20px 20px 0 0; border-bottom:1px solid #000;}
 .lpop-wrap .lpop-header .lpop-tit {font-family: 'Noto Sans KR', sans-serif; font-size:22px; font-weight:700; line-height:normal;}
