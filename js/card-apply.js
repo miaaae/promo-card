@@ -32,6 +32,10 @@ $(document).ready(function(){
 
     checking();
 
+    // 안내팝업
+    $('.info-pop-wrap').show();
+    $('.dimmed').show();  
+
 });
 
 function fnOpTerms(layer){
@@ -76,3 +80,8 @@ function checking(){
         }
     });
 }
+
+function fnCloseInfo(){
+    $('.info-pop-wrap').hide();
+    $('.dimmed').hide();
+} 

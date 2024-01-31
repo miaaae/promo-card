@@ -142,15 +142,16 @@
                     <script>
                         const swiper = new Swiper('.swiper.main-wrap', {
                             slidesPerView: 'auto',
+                            initialSlide: 0,
                             centeredSlides: true, 
                             spaceBetween: 8,
                             slidesPerGroup: 1,
                             autoplay: {
-                                delay: 3000,
+                                delay: 3500,
                                 disableOnInteraction: false,
                             },
                             loop: true,
-                            loopedSlides: 1,
+                            loopedSlides: 5,
                             pagination: {
                                 el: '.swiper-pagination',
                                 clickable : true,
@@ -166,8 +167,9 @@
                                 nextSlideMessage: '다음 슬라이드',   
                                 slideLabelMessage: '총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.',
                             },
-                            
                         });
+                        
+                        swiper.slideTo(2);
 
                         $(document).ready(function(){
                             let sw = 0;
@@ -192,6 +194,7 @@
         <section id="section2" class="sec-wrap">
             <!-- 카드 상품 리스트 -->
             <h2 class="sec-tit">Select your Days.</h2>
+            <p class="desc">국내에서 해외까지, 다양한 혜택이 준비되어 있어요.<br>일상과 취향을 세심하게 도와줄 온/오프라인 혜택도 만나보세요.</p>
             <div class="card-selc-wrap">
                 <div class="card-list">
                     <ul class="card-list-wrap">
@@ -209,7 +212,7 @@
                             </div>
                             <p class="card-name">Happy Z</p>
                             <p class="card-desc">Card Type. Happy</p>                            
-                            <div class="card-btn">
+                            <div class="card-btn bubble">
                                 <a href="card-apply.html" title="새 창 열림">카드 신청하기</a>
                             </div>
                         </li>
@@ -390,14 +393,14 @@
                         <p class="desc">보통의 하루 속 특별한 당신을 위한 혜택을 골라보세요</p>
                         <p class="desc">하루 하루가 쌓일수록 카드 속 리워드도 쌓여가요</p>
                     </div>
-                    <div class="cont">
+                    <div class="cont stars">
                         <div class="mobile">
                             <div class="screen">
                                 <img src="./images/mo-screen.png" alt="올디 카드 모바일 이용 화면">
                             </div>
                         </div>
                     </div>
-                </div> 
+                </div>
             </div>
             <div class="anim-car">
                 <div class="pc">
@@ -463,22 +466,10 @@
 <!-- 포트폴리오 안내 팝업 -->
 <div class="info-pop-wrap">
     <div class="pop-box">
-        <P>이 페이지는 포트폴리오를 위해 구성 되었습니다. 특정 카드상품과 상관 없음을 미리 알려드립니다.<br>감사합니다 😊</P>
+        <P>이 페이지는 포트폴리오를 위해 구성 되었습니다. 감사합니다 😊</P>
         <button onclick='fnCloseInfo();'>닫기</button>
     </div>
 </div>
-
-<script type="text/javascript">
-    $(document).ready(function(){
-        $('.info-pop-wrap').show();
-        $('.dimmed').show();
-    });
-
-    function fnCloseInfo(){
-        $('.info-pop-wrap').hide();
-        $('.dimmed').hide();
-    }
-</script>
 <!--// 포트폴리오 안내 팝업 -->
     
 </body>

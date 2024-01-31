@@ -14,4 +14,13 @@ $(document).ready(function(){
 
     });
 
+    // 안내팝업
+    $('.info-pop-wrap').show();
+    $('.dimmed').show();  
+
 });
+
+function fnCloseInfo(){
+    $('.info-pop-wrap').hide();
+    $('.dimmed').hide();
+} 
