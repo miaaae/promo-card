@@ -76,7 +76,6 @@ function checking(){
             $('.terms-box #all').attr('disabled', false);
         }else{
             $('.terms-box #all').prop('checked', false);
-            $('.terms-box #all').attr('disabled', true);
         }
     });
 }
