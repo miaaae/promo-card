@@ -29,14 +29,14 @@ caption {overflow:hidden; width:0; height:0; text-indent:-9999px;}
 #footer .footer-wrap .footer-tit {font-family: 'Shrikhand', serif; font-size:20px; line-height:normal;}
 #footer .footer-wrap .flex-box {display:flex; flex-direction:row;}
 #footer .footer-wrap .flex-box .cont {display:flex; flex:1; flex-direction:column;}
-#footer .footer-wrap .adress-box p {font-family: 'Noto Sans KR', sans-serif; font-size:14px; color:#000; line-height:normal;}
-#footer .footer-wrap .adress-box .info {margin-top:5px;}
-#footer .footer-wrap .adress-box .info p {font-family: 'Noto main-txt-boxSans KR', sans-serif; font-size:14px; color:#000; line-height:normal;}
-#footer .footer-wrap .adress-box,
-#footer .footer-wrap .family-site {margin-top:20px;}
+#footer .footer-wrap .address-box p {font-family: 'Noto Sans KR', sans-serif; font-size:14px; color:#000; line-height:normal;}
+#footer .footer-wrap .address-box .info {margin-top:5px;}
+#footer .footer-wrap .address-box .info p {font-family: 'Noto main-txt-boxSans KR', sans-serif; font-size:14px; color:#000; line-height:normal;}
+#footer .footer-wrap .address-box,
+#footer .footer-wrap .family-site {margin-top:10px;}
 #footer .footer-wrap .family-site ul li {display:inline-block}
 #footer .footer-wrap .family-site ul li + li{margin-left:10px;}
-#footer .footer-wrap .family-site ul li a {font-family: 'Noto Sans KR', sans-serif; font-size:16px; color:#000;}
+#footer .footer-wrap .family-site ul li a {font-family: 'Noto Sans KR', sans-serif; font-size:14px; color:#000;}
 
 #footer .footer-wrap .terms-box {margin-top:0px;}
 #footer .footer-wrap .terms-box {display:flex; flex-direction:row; gap:8px}

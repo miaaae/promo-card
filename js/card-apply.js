@@ -79,8 +79,3 @@ function checking(){
         }
     });
 }
-
-function fnCloseInfo(){
-    $('.info-pop-wrap').hide();
-    $('.dimmed').hide();
-} 
