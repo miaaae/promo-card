@@ -64,7 +64,10 @@ br.mo {display:none;}
     .main-menu-wrap.mo {display:flex; flex-direction:column; align-items:flex-start; transform:translateX(100%); position:fixed; top:0; right:0; z-index:100; width:calc(100vw - 170px); height:calc(100vh - 100px); background:#fff; padding:60px 24px 40px 24px; transition:all .5s ease-in-out; overflow-y:scroll; overflow-x:hidden;}
     .main-menu-wrap.mo.on {transform:translateX(0%); box-shadow:12px 0px 28px 5px rgba(0,0,0,.6)}
     .main-menu-wrap.mo .main-menu {flex:1; height:100%;}
-    .main-menu-wrap.mo .main-menu .list li {display:block; font-size:16px; font-weight:700; margin:0 0;}
+    .main-menu-wrap.mo .main-menu .list li {display:block; font-size:18px; font-weight:700; margin:0 0;}
+    .main-menu-wrap.mo .main-menu .list li:nth-child(1) {position:relative; z-index:1;}
+    .main-menu-wrap.mo .main-menu .list li:nth-child(1) a {position:relative; z-index:1; padding:0 3px 0}
+    .main-menu-wrap.mo .main-menu .list li:nth-child(1):after {content:''; position:absolute; left:0; bottom:-4px; z-index:0; width:100%; height:10px; background:#c9ff72;}
     .main-menu-wrap.mo .main-menu .list li + li {margin-top:28px; font-size:18px; font-weight:700;}
     .main-menu-wrap.mo .menu-close .btn-close {display:block; position:absolute; top:20px; right:20px; width:20px; height:20px; font-size:0; line-height:0; background:url('../images/ico_close_64.png') right center / 20px auto no-repeat;}
     
