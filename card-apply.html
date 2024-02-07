@@ -47,7 +47,7 @@
             <div class="main-menu-wrap">
                 <nav class="main-menu">
                     <ul class="list">
-                        <li><a href="#;" title="새 창 열림">카드소개</a></li>
+                        <li><a href="card-apply.html" title="새 창 열림">카드 신청하기</a></li>
                         <li><a href="#;" title="새 창 열림">이벤트</a></li>
                         <li><a href="#;" title="새 창 열림">고객센터</a></li>
                     </ul>
@@ -147,36 +147,20 @@
                                 <div class="title">
                                     <p>카드를 신청하기 전 유의사항을 확인해 주세요</p>
                                 </div>
-                                <div class="triger">
+                                <div class="trigger">
                                     <button class="toggle-btn close"><span>닫기</span></button>
                                     <button class="toggle-btn open"><span>열기</span></button>
                                 </div>
                             </div>
                             <div class="toggle-body">
                                 <ul class="bl1">
-                                    <li>성명, 영문명, 국내거소신고번호, 신분증/신분서류 발급일·기관, 연락처(휴대폰, 자택, 직장), 주소(자택,직장), 이메일, 직장명, 부서, 직위, 성별, 국적, 음성data, CI(연계정보), DI(중복가입확인정보), 차량정보(차대번호, 차량번호), 식별정보 변경이력, 기타 (금융)거래관계 및 서비스의 설정·유지·이행·관리·개선 등과 관련하여 본인이 제공한 정보,</li>
-                                    <li>이용자의 브라우저 종류 및 OS, 검색어, 서비스 이용 기록, IP Address, Mac address, CPU ID, HDD S/N, IMEI(안드로이드 9버전 이하만 수집), UUID, 방문일시, 결제기록, 쿠키</li>
-                                    <li>자동납부정보(가입자명, 통신회사, 통신요금정보, 전기사용정보, 가스사용 정보, 아파트 관리비 정보, 아파트임대료 정보, 유치원ㆍ초중고교 등 학부모부담금 납부정보, 사회보험료 납부정보, 세금 납부정보, 제휴사 멤버십 정보 등)</li>
+                                    <li>계약을 체결하기 전에 금융상품설명서와 약관을 확인하시기 바랍니다.</li>
+                                    <li>신용카드 발급이 부적정한 경우(개인신용평점 낮음, 연체사유발생등) 카드발급이 제한될 수 있습니다.</li>
+                                    <li>금융소비자는 금융소비자보호법 제19조제1항에 따라 해당 상품 또는 서비스에 대하여 설명을 받을 권리가 있습니다.</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <script>
-                        $(document).ready(function(){
-                            
-                            $('.toggle-btn.open').click(function(){
-                                $(this).parent().find('.toggle-btn.close').css('display','block');                                
-                                $(this).css('display','none');
-                                $('.toggle-body').css('display','block');
-                            })
-                            $('.toggle-btn.close').click(function(){
-                                $(this).parent().find('.toggle-btn.open').css('display','block');
-                                $(this).css('display','none');
-                                $('.toggle-body').css('display','none');
-                            })
-                        
-                        });
-                    </script>
                 </div>
                 <div class="input-box">
                     <div class="wrap input">

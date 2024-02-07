@@ -32,6 +32,18 @@ $(document).ready(function(){
 
     checking();
 
+    // toggle
+    $('.toggle-btn.open').click(function(){
+        $(this).parent().find('.toggle-btn.close').css('display','block');                                
+        $(this).css('display','none');
+        $('.toggle-body').css('display','block');
+    })
+    $('.toggle-btn.close').click(function(){
+        $(this).parent().find('.toggle-btn.open').css('display','block');
+        $(this).css('display','none');
+        $('.toggle-body').css('display','none');
+    })
+
     // 안내팝업
     $('.info-pop-wrap').show();
     $('.dimmed').show();  
