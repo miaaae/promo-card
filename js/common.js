@@ -15,7 +15,7 @@ $(document).ready(function(){
     });
 
     // 안내팝업
-    fnInfoPop();     
+    //fnInfoPop();     
 
 });
 
