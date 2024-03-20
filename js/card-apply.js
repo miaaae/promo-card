@@ -32,21 +32,8 @@ $(document).ready(function(){
 
     checking();
 
-    // toggle
-    $('.toggle-btn.open').click(function(){
-        $(this).parent().find('.toggle-btn.close').css('display','block');                                
-        $(this).css('display','none');
-        $('.toggle-body').css('display','block');
-    })
-    $('.toggle-btn.close').click(function(){
-        $(this).parent().find('.toggle-btn.open').css('display','block');
-        $(this).css('display','none');
-        $('.toggle-body').css('display','none');
-    })
-
     // 안내팝업
-    $('.info-pop-wrap').show();
-    $('.dimmed').show();  
+    fnInfoPop();  
 
 });
 
@@ -91,3 +78,22 @@ function checking(){
         }
     });
 }
+
+function fnInfoPop(){
+    let str = "";
+
+    str += '<div class="info-pop-wrap">';
+    str += '    <div class="pop-box">';
+    str += '        <P>이 페이지는 포트폴리오를 위해 구성 되었습니다. 감사합니다 😊</P>';
+    str += '        <button onclick="fnCloseInfo();">닫기</button>';
+    str += '    </div>';
+    str += '</div>';
+
+    $('.info-pop-wrap').show().html(str);
+    $('.dimmed').show(); 
+}
+
+function fnCloseInfo(){
+    $('.info-pop-wrap').hide();
+    $('.dimmed').hide();
+} 

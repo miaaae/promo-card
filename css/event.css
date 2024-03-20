@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+@import url('base.css');
+
+#main {padding:120px 0px 100px; display:block; width:min(100%, 1000px); margin:0 auto;}
+
+.mt5 {margin-top:5px;}
+.mt10 {margin-top:10px;}
+
+/* tit-visual */
+.tit-visual {padding:0 20px}
+.tit-visual .cont-wrap {display:flex; flex-direction:row; height:200px; border-radius:14px; background:#fafafa; padding:0 30px 0;}
+.tit-visual .cont-wrap .txt-box {display:flex; flex-direction:column; padding:40px 0 0;}
+.tit-visual .cont-wrap .txt-box .tit {font-size:22px; font-weight:700; line-height:normal; word-break:keep-all;}
+.tit-visual .cont-wrap .txt-box .date {font-size:16px; line-height:normal; margin-top:10px;}
+.tit-visual .cont-wrap .thumb-box {margin-left:auto; width:200px;}
+.tit-visual .cont-wrap .thumb-box img {width:100%;}
+
+/* contents */
+.desc-wrap {margin-top:60px; padding:0 20px;}
+.desc-wrap .dl1 {display:flex; flex-direction:row;}
+.desc-wrap .dl1 dt + dd {margin-top:0;}
+.desc-wrap .dl1 dt {width:calc(1000px - 820px); font-size:18px; font-weight:700; line-height:normal;}
+.desc-wrap .dl1 dd {width:820px; font-size:16px; font-weight:400; line-height:normal;}
+.desc-wrap .dl1 + .dl1 {margin-top:40px;}
+.desc-wrap .dl1 .info1 {font-size:16px; font-weight:400; line-height:normal; margin-top:10px; color:#636363;}
+
+/* list style */
+.dot-type1 li, .dash-type1 li, .numl li {position:relative; padding-left:12px; font-family: 'Noto Sans KR', sans-serif; font-size:16px; font-weight:400; line-height:normal;}
+.dot-type1 li + li, .dash-type1 li + li, .numl li + li {margin-top:3px;}
+.dot-type1 li:before {content:''; position:absolute; left:0; top:11px; width:3px; height:3px; border-radius:100%; background:#333;}
+.dash-type1 li:before {content:''; position:absolute; left:0; top:11px; width:6px; height:1px; background:#333;}
+.dot-type1 li strong {font-weight:700}
+.numl li {padding-left:20px; text-indent:-20px;}
+
+/* toggle */
+.notice-wrap {margin-top:60px; padding:0 20px;}
+.toggle-box .toggle-header {position:relative; padding:24px 0;}
+.toggle-box .toggle-header .title p {font-size:18px; font-weight:700; line-height:normal;}
+.toggle-box .toggle-header .trigger {position:absolute; right:0px; top:50%; transform:translateY(-50%)}
+.toggle-box .toggle-header .trigger .toggle-btn {display:block; width:18px; height:18px; border:none;}
+.toggle-box .toggle-header .trigger .toggle-btn.open {display:none; background:url('../images/ico_down_36.png') center center / 18px auto no-repeat;}
+.toggle-box .toggle-header .trigger .toggle-btn.close {background:url('../images/ico_down_36.png') center center / 18px auto no-repeat; transform: rotate(-180deg);}
+.toggle-box .toggle-header .trigger .toggle-btn.close span,
+.toggle-box .toggle-header .trigger .toggle-btn.open span {position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: rect(0, 0, 0, 0); white-space: nowrap; border: 0;}
+.toggle-box .toggle-body {display:block; padding:0;}
+.toggle-box .toggle-body .dot-type1, .toggle-box .toggle-body .numl {margin-top:0;}
+
+/* media query */
+@media screen and (max-width:800px) {
+    .tit-visual .cont-wrap {height:auto; padding:0 30px 15px;}
+    .tit-visual .cont-wrap {display:flex; flex-direction:column;}
+    .tit-visual .cont-wrap .txt-box {padding:40px 0 20px;}
+    .desc-wrap .dl1 {flex-direction:column;}
+    .desc-wrap .dl1 dt + dd {margin-top:15px;}
+    .desc-wrap .dl1 dt {width:calc(1000px - 0px); font-size:16px;}
+    .desc-wrap .dl1 dd {width:100%;}
+    .toggle-box .toggle-header .title p {font-size:16px;}
+}
