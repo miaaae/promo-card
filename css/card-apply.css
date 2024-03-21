@@ -98,7 +98,7 @@ table.lpop-tb-type1 th:last-child, table.lpop-tb-type1 td:last-child {border-rig
 .toggle-box .toggle-body .bl1, .toggle-box .toggle-body .bl2, .toggle-box .toggle-body .numl {margin-top:0;}
 
 /* media query */
-@media screen and (max-width:800px) {
+@media all and (max-width:768px) {
     #wrap {overflow-x:hidden;}
     #main {padding:100px 0 40px;}
 

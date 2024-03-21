@@ -52,11 +52,11 @@
 #section3 .anim-car .mo {display:none;}
 #section3 .anim-car .pc img {float:left;}
 
-@keyframes flo{
+/* @keyframes flo{
     50%{
       transform: translateY(5px);
     }
-}
+} */
 @keyframes pc { 
     from {transform: translateX(2000px);} 
     to {transform: translateX(-3000px);}
@@ -122,7 +122,7 @@
 
 .mb15 {margin-bottom:15px;}
 
-@media screen and (max-width:800px){
+@media all and (max-width:768px){
     #section2 .card-selc-wrap .card-list .card-list-wrap {display:flex; flex-wrap:wrap; gap:50px 0;}
     #section2 .card-selc-wrap .card-list .card-list-wrap .list {width:50%;}
     #section2 .card-selc-wrap .card-list .card-list-wrap .list .card-img-wrap {padding:0 2px;}
@@ -146,11 +146,11 @@
     #section3 .anim-car .mo {display:block; position:absolute; bottom:20px; width:2000px; transform: translateX(0); animation: mo 45s linear infinite;}
     #section3 .anim-car .mo img {float:left; width:1000px;}
     
-    @keyframes flo{
+    /* @keyframes flo{
         50%{
           transform: translateY(5px);
         }
-    }
+    } */
     
     @keyframes mo { from {transform: translateX(1000px);} to {transform: translateX(-2000px);} }
 
